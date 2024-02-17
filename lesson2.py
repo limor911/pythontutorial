@@ -160,9 +160,22 @@ for i in range(3):
     l1.append(int(input('value l1 ')))
     l2.append(int(input('value l2 ')))
 
+
 #l1= 2*l2 ==true 
 
-if sum(l1)==2*sum(l2) or l1==l2:
+print(f"{l1} this sum l1 {sum(l1)} ,\n {l2} and this sum l2  {sum(l2)}")
+print(f"\n all in l1 {all(l1)}  ,\n all in l2  {all(l2)}")
+print(f"\n set in l1 {set(l1)}  ,\n set in l2  {set(l2)}")
+s1=set(l1)
+s2=set(l2)
+print(f"\n symetric diffrence {set(l1).symmetric_difference(set(l2))}")
+
+if set(l1)==set(l2):
+    print(True)
+else:
+    print(False)
+
+if sum(l2)==2*sum(l1) or l1==l2 :
     print(True)
 else:
     print(False)
