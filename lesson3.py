@@ -1,90 +1,72 @@
-# defaultdict
 
-from typing import List
 '''
-def calculate_avg_list(l:list[float])->float:
-        return sum(l)/len(l)
+## implement ! function
+num=5
+print(f"this is num {num}")
 
+c=1
+sum=1
+while c!=num:
+    sum *=num
+    num=num-1
+    print(f"this is num {num}")
+    
 
-calculate_avg_list ([2,3])
-print(calculate_avg_list)
+print(f"this is sum {sum}")
+'''
+'''
+##fibbonachi 
+begin_f=1 
+end_f=10
+d=0
+##1,1,2,3,5,8,13,21,34,55
+c=[]
 
+while True:
+    c.append(begin_f)
+    begin_f+=begin_f
+    end_f-= 1
+    if end_f == 0:
+        break
 
-limor="limor"
+c.append(begin_f)
+print(f" this is begin {begin_f} , \n this is end {end_f} \n this is c {c}")
+'''
 
-def my_name():
-    print(limor)
-
-print (my_name())
-
-
-def print_list(l:list, dir)->list:
-  if dir:
-    return l[::-1]
-  else:
-    return l
-  
-print (print_list([1,2,3,4],1))
-
-
-
-def fibbonachi(results:list)->list:
-    length  = len(results)
-    a,b = 0,1
-    results = []
-    if length <= 0:
-        results = []
-    elif length == 1:
-         results = [0]
-    elif length == 2:
-        results = [0,1]
+'''
+end_f = 10  # Initialize end_f
+begin_f = 1  # Initialize begin_f
+d = 0  # Initialize d
+c = []  # Initialize c
+ 
+while end_f > 0:  # Corrected while loop with a colon
+    if begin_f == 1:
+        c.append(begin_f)
     else:
-          while a < length:
-            results.append(a)
-            a,b = b,a+b
-    return results
+        c.append(d)
+    d = begin_f + begin_f  # Update d
+    end_f -= 1  # Decrement end_f
+    if end_f == 0:  # Check if end_f is 0
+        break  # Exit the loop if end_f is 0
 
-print (fibbonachi([1,2,3]))
-
-
-  
-
-
-from statistics import median
-from collections import defaultdict
-
-nvidia=[10,20,30,40,10,20,40,50,60,55,57,40,33,40,66,77,100,110,120]
-##>>>(0,"buy"),(1,"sell"),(0,"hold")
-
-def stock_logic(stock:list):
-  
-    mediane=median(stock)
-    dic =defaultdict(list)
-
-nformation["buy"].append(i)
-    
-
-    for j,i in enumerate(stock):
-        if stock[i] < mediane:
-             dic = {stock[i], 'buy'}
-        elif stock[i]==mediane:
-             hold.append=stock[i]
-        else:
-          sell.append=stock[i]
-    
-    return action
-
-
-print (stock_logic(nvidia))
+print(c)  # Output: [1, 2, 2, 2, 2, 2, 2, 2, 2, 2]
 '''
 
-l1= [0,1,2,3,4,5,6]
-l2= [10,11,12,13,14,15,16]
+# Pointers example
 
-print(l1[1:4])
-print(l1[1:4:2])
+a = [1,2,3,4]
 
-print (20 in l1, 11 in l2, 12 in l2), 
-print(l1.index(1))
+b = a
 
-###
+b.append(5)
+
+b
+
+import copy ## copy pointers
+import collections
+
+a = [1,2,3,4]
+b = copy.copy(a)
+
+b.append(5)
+a

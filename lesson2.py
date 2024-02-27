@@ -151,6 +151,7 @@ for num in diff:
         print(False)
 '''
 
+'''
 ###7###
 l1 = []
 l2 = []
@@ -166,16 +167,33 @@ for i in range(3):
 print(f"{l1} this sum l1 {sum(l1)} ,\n {l2} and this sum l2  {sum(l2)}")
 print(f"\n all in l1 {all(l1)}  ,\n all in l2  {all(l2)}")
 print(f"\n set in l1 {set(l1)}  ,\n set in l2  {set(l2)}")
-s1=set(l1)
-s2=set(l2)
 print(f"\n symetric diffrence {set(l1).symmetric_difference(set(l2))}")
 
-if set(l1)==set(l2):
-    print(True)
-else:
-    print(False)
 
-if sum(l2)==2*sum(l1) or l1==l2 :
+if sum(l2)==2*sum(l1) or l1==l2  :
     print(True)
 else:
     print(False)
+'''
+
+'''
+
+    l1= [0,1,2,3,4,5,6]
+l2= [10,11,12,13,14,15,16]
+
+print(l1[1:4])
+print(l1[1:4:2])
+
+print (20 in l1, 11 in l2, 12 in l2), 
+print(l1.index(1))
+'''
+
+from collections import defaultdict
+
+d = defaultdict(list)
+
+print (f"fdgdfg: {d} ")
+
+r={"lir": [2,3,3]}
+
+print (r.get("ghj", None))
